@@ -1,1 +1,16 @@
-hello
+***********bit manipulations************
+
+to set right most x bits to 0  -> right shift the value by x and then left shift by x
+
+* reversing a linked list :
+    ListNode *reverseList(ListNode *head) {
+        ListNode *prev = NULL;
+        ListNode *fwd;
+        while(head) {
+            fwd = head->next;
+            head->next = prev;
+            prev = head;
+            head = fwd;
+        }
+        return prev;
+    }
